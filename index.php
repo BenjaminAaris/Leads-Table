@@ -31,7 +31,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="index.css">
-  <script src="script.js"></script>
 </head>
 <body>
   <table>
@@ -54,7 +53,7 @@
     
     while ($row = mysqli_fetch_assoc($result)){
       echo "
-      <tr onclick='test()'>
+      <tr onclick='showLead(". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
         <td>" . $row['id'] . "</td>
         <td>" . $row['name'] ."</td>
         <td>" . $row['mail'] ."</td>
@@ -70,6 +69,18 @@
     ?>
     
   </table>
+  <h3>ID: <span id="id"></span></h3>
+  <h3>Name: <span id="name"></span> </h3>
+  <h3>Mail: <span id="mail"></span> </h3>
+  <h3>City: <span id="city"></span> </h3>
+  <h3>Postal code: <span id="postal_code"></span> </h3>
+  <h3>Vat number: <span id="vat_number"></span> </h3>
+  <h3>Phone number: <span id="phone"></span> </h3>
+  <h3>Website: <span id="website"></span> </h3>
+  <h3>Adress: <span id="adress"></span> </h3>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
 
