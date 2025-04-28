@@ -6,9 +6,5 @@ table, th, tr, td {
   }
   tr:hover {background-color: aqua;}
  
-  th:nth-child(even) {
-    background-color: #D6EEEE;
-  }
-  th:nth-child(uneven) {
-    background-color: #D6EEEE;
-  }
+  th:nth-child(even){background-color: rgb(14, 238, 6);}
+  th:nth-child(odd){background-color: rgb(14, 238, 6);}
