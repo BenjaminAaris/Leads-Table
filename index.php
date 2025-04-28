@@ -27,5 +27,14 @@ if ($conn->connect_error) {
 }
   echo "Connected successfully";
   
-  $sql = "select * from leads_table"
+  $sql = "select * from leads";
+
+  $mysql = $conn->query($sql);
+
+  while($row = $result->fetch_assoc()) {
+    echo $row["name"];
+  }
+
+  $conn->close();
+
 ?>
