@@ -33,7 +33,8 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <table>
+  <input type="text" id="mySearch" onkeyup="search(event)" placeholder="Search.." title="Type in a category">
+  <table style="width: 100px;">
   <colgroup>
   <col span="3" >
 </colgroup>
@@ -53,7 +54,7 @@
     
     while ($row = mysqli_fetch_assoc($result)){
       echo "
-      <tr onclick='showLead(". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
+      <tr id='list' onclick='showLead(". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
         <td>" . $row['id'] . "</td>
         <td>" . $row['name'] ."</td>
         <td>" . $row['mail'] ."</td>

@@ -9,3 +9,20 @@ function showLead(id, name, mail, city, postal_code, vat_number, phone, website,
     document.getElementById("website").innerHTML = website;
     document.getElementById("adress").innerHTML = adress;
 }
+
+function search(event) {
+    const searchTerm = event.target.value.trim().toLowerCase();
+    console.log(searchTerm);
+    const listItems = document.querySelectorAll("tr#list td");
+
+    console.log(event);
+    console.log(listItems);
+  
+    listItems.forEach(function(item) {
+      item.style.display = 'revert';
+  
+      if (!item.innerText.toLowerCase().includes(searchTerm)) {
+        item.style.display = 'none';
+      }
+    })
+  }
