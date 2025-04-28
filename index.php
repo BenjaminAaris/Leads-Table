@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,4 +30,19 @@
 
 
 </body>
-</html>
+</html></html>
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+$conn = new mysqli($servername, $username, $password);
+
+if ($conn->connect_error) {
+  echo "Connection failed: " . $conn->connect_error;
+}
+  echo "Connected successfully";
+  
+  $sql = "select * from leads_table"
+?>
