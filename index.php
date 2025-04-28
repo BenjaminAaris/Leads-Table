@@ -10,27 +10,10 @@
 <body>
 <h1>Leads table</h1> 
 <h2> Here you can see all the information from the DataBase </h2>
-    <table>
-        <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-        </tr>
-    </table>
 
 
 </body>
-</html></html>
+</html>
 
 <?php
 $servername = "localhost";
