@@ -16,7 +16,7 @@ table, th, tr, td {
     font-size: larger;
     vertical-align: center;
     column-fill: auto;
-    box-sizing: border-box;
+    
   }
   tr {
     width: 150px;
