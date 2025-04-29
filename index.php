@@ -34,7 +34,7 @@
 </head>
 <body>
   <input type="text" id="mySearch" onkeyup="search(event)" placeholder="Search.." title="Type in a category">
-  <table id="table">
+  <table id="table" style="width: 100px;">
   <colgroup>
   <col span="4" >
 </colgroup>
