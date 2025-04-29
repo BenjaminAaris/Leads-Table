@@ -11,18 +11,57 @@ function showLead(id, name, mail, city, postal_code, vat_number, phone, website,
 }
 
 function search(event) {
-    const searchTerm = event.target.value.trim().toLowerCase();
-    console.log(searchTerm);
-    const listItems = document.querySelectorAll("tr#list td");
+    const searchTerm = event.target.value.trim().toUpperCase();
+    table = document.getElementById("table");
+    tr = table.getElementsByTagName("tr");
 
-    console.log(event);
-    console.log(listItems);
+    // Går igennem rækkerne.
+    for (let i = 0; i < tr.length; i++) {
+
+        // Indeholder alle td elementerne i vores række.
+        idData = tr[i].getElementsByTagName('td')[0];
+        nameData = tr[i].getElementsByTagName('td')[1];
+        mailData = tr [i].getElementsByTagName('td')[2]
+        cityData = tr [i].getElementsByTagName('td')[3]
+        postal_codeData = tr [i].getElementsByTagName('td')[4]
+        vat_numberData = tr [i].getElementsByTagName('td')[5]
+        phoneData = tr [i].getElementsByTagName('td')[6]
+        websiteData = tr[i].getElementsByTagName('td')[7];
+        adressData = tr [i].getElementsByTagName('td')[8]
+
+        if (idData) {
+            idValue = idData.innerText;
+            nameValue = nameData.innerText;
+            mailValue = mailData.innerText;
+            cityValue = cityData.innerText;
+            postal_codeValue = postal_codeData.innerText;
+            vat_numberValue = vat_numberData.innerText;
+            phoneValue = phoneData.innerText;
+            websiteValue = websiteData.innerText;
+            adressValue = adressData.innerText;
+            if (idValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            } else if (nameValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            }else if (mailValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            } else if (cityValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            } else if (postal_codeValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            } else if (vat_numberValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            } else if (phoneValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            } else if (websiteValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            } else if (adressValue.toUpperCase().indexOf(searchTerm) > -1) {
+                tr[i].style.display = "";
+            }else {
+                tr[i].style.display = "none";
+            }
+        }
+        
+    }
   
-    listItems.forEach(function(item) {
-      item.style.display = 'revert';
-  
-      if (!item.innerText.toLowerCase().includes(searchTerm)) {
-        item.style.display = 'none';
-      }
-    })
   }

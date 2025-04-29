@@ -34,9 +34,9 @@
 </head>
 <body>
   <input type="text" id="mySearch" onkeyup="search(event)" placeholder="Search.." title="Type in a category">
-  <table>
+  <table id="table">
   <colgroup>
-  <col span="3" >
+  <col span="4" >
 </colgroup>
     <tr>
       <th>ID</th>
@@ -54,7 +54,7 @@
     
     while ($row = mysqli_fetch_assoc($result)){
       echo "
-      <tr id='list' onclick='showLead(". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
+      <tr id='row' onclick='showLead(". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
         <td>" . $row['id'] . "</td>
         <td>" . $row['name'] ."</td>
         <td>" . $row['mail'] ."</td>
@@ -80,6 +80,8 @@
   <h3>Website: <span id="website"></span> </h3>
   <h3>Adress: <span id="adress"></span> </h3>
 
+  <!-- Kommentar -->
+   
 
   <script src="script.js"></script>
 </body>
