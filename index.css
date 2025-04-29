@@ -16,6 +16,7 @@ table, th, tr, td {
     font-size: larger;
     vertical-align: center;
     column-fill: auto;
+    box-sizing: border-box;
   }
   tr {
     width: 150px;
@@ -35,9 +36,9 @@ table, th, tr, td {
   th:nth-child(odd){background-color: rgb(14, 238, 6);}
   h3{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
+    font-size: 25px;
   }
   input {
-    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-  }
+  font-size: 25px;
+  } 
