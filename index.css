@@ -1,14 +1,26 @@
 table, th, tr, td {
     border: 1px solid black;
     border-collapse: collapse;
-    padding: 15px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;;
+    font-size: medium;
+    margin-right: auto;
+    margin-left: auto;
   }
-
   th {
     width: 150px;
+    height: 50px;
+    font-size: larger;
+  }
+  tr {
+    width: 150px;
+    height: 50px;
+    font-size: larger;
+  }
+  td {
+    width: 150px;
+    height: 50px;
+    font-size: medium;
   }
   
   tr:hover {background-color: aqua;}
