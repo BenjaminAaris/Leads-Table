@@ -9,17 +9,15 @@
   if ($conn->connect_error) {
     echo "Connection failed: " . $conn->connect_error;
   }
-
-
     
-    $sql = 'select * from leads';
-    $result = mysqli_query($conn, $sql);
+  $sql = 'select * from leads';
+  $result = mysqli_query($conn, $sql);
 
-    if (mysqli_num_rows($result)>0) {
-      
-    } else {
-      echo "0 results";
-    }
+  if (mysqli_num_rows($result)>0) {
+    
+  } else {
+    echo "0 results";
+  }
 
   mysqli_close($conn);
 ?>
@@ -48,6 +46,7 @@
       <th>Phone number</th>
       <th>Website</th>
       <th>Adress</th>
+      <th>Detele</th>
     </tr>
 
     <?php 
@@ -64,6 +63,7 @@
         <td>" . $row['phone'] ."</td>
         <td>" . $row['website'] ."</td>
         <td>" . $row['adress'] ."</td>
+        <td>" . $row['delete'] ."</td>
       </tr> 
       ";
     }
@@ -79,6 +79,9 @@
   <h3>Phone number: <span id="phone"></span> </h3>
   <h3>Website: <span id="website"></span> </h3>
   <h3>Adress: <span id="adress"></span> </h3>
+  <h3>Delete: <span id="delete"></span></h3>
+
+  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
 
   <!-- Kommentar -->
    
