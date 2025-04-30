@@ -68,11 +68,10 @@
       ";
     }
     
-    ?>
-  <button onclick=""></button>
+    ?>  
 
   </table>
-  <h3>ID: <span id="id"></span></h3>
+  <h3 >ID: <span id="id"></span></h3>
   <h3>Name: <span id="name"></span> </h3>
   <h3>Mail: <span id="mail"></span> </h3>
   <h3>City: <span id="city"></span> </h3>
