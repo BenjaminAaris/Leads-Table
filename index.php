@@ -53,7 +53,7 @@
     
     while ($row = mysqli_fetch_assoc($result)){
       echo "
-      <tr id='". $row['id'] ."' onclick='showLead(". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
+      <tr id='". $row['id'] ."' onclick='showLead(event, ". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
         <td>" . $row['id'] . "</td>
         <td>" . $row['name'] ."</td>
         <td>" . $row['mail'] ."</td>
@@ -63,7 +63,7 @@
         <td>" . $row['phone'] ."</td>
         <td>" . $row['website'] ."</td>
         <td>" . $row['adress'] ."</td>
-        <td><button onclick='deleteLead(". $row['id'] .")''>Delete row</button>" . $row['delete'] ."</td>
+        <td><button onclick='deleteLead(event, ". $row['id'] .")''>Delete row</button>" . $row['delete'] ."</td>
       </tr> 
       ";
     }

@@ -1,4 +1,4 @@
-function showLead(id, name, mail, city, postal_code, vat_number, phone, website, adress) {
+function showLead(event, id, name, mail, city, postal_code, vat_number, phone, website, adress) {
     document.getElementById("id").innerHTML = id;
     document.getElementById("name").innerHTML = name;
     document.getElementById("mail").innerHTML = mail;
@@ -63,7 +63,8 @@ function search(event) {
         }
     }
   }
-  function deleteLead(id) {
+  function deleteLead(event, id) {
+    event.stopPropagation();
     document.getElementById(id).remove();
   }
 
