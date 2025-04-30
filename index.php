@@ -71,22 +71,33 @@
     ?>  
 
   </table>
+  
+  
+
+  <!-- Kommentar -->
+   
+  <script src="script.js"></script>
+
+
+  <div class="row">
+  <div class="column" style="background-color:#aaa;">
   <h3 >ID: <span id="id"></span></h3>
   <h3>Name: <span id="name"></span> </h3>
   <h3>Mail: <span id="mail"></span> </h3>
+  </div>
+  <div class="column" style="background-color:#bbb;">
   <h3>City: <span id="city"></span> </h3>
   <h3>Postal code: <span id="postal_code"></span> </h3>
   <h3>Vat number: <span id="vat_number"></span> </h3>
+  </div>
+  <div class="column" style="background-color:#ccc;">
   <h3>Phone number: <span id="phone"></span> </h3>
   <h3>Website: <span id="website"></span> </h3>
   <h3>Adress: <span id="adress"></span> </h3>
-  
-  <!-- Kommentar -->
-   
+  </div>
+</div>
 
 
-
-  <script src="script.js"></script>
 </body>
 </html>
 
