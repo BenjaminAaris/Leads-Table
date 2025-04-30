@@ -46,7 +46,7 @@
       <th>Phone number</th>
       <th>Website</th>
       <th>Adress</th>
-      <th>Detele</th>
+      <th>Delete</th>
     </tr>
 
     <?php 
@@ -63,12 +63,18 @@
         <td>" . $row['phone'] ."</td>
         <td>" . $row['website'] ."</td>
         <td>" . $row['adress'] ."</td>
-        <td>" . $row['delete'] ."</td>
+        <td><button type='button' value='Detlete' onlick='deleteRow(this)'>Delete</button>" . $row['delete'] ."</td>
       </tr> 
       ";
     }
     ?>
-    
+    <script>
+function deleteRow(r) {
+  var l = r.parentNode.parentNode.rowIndex;
+  document.getElementById("table").deleteRow(r);
+}
+</script>
+
   </table>
   <h3>ID: <span id="id"></span></h3>
   <h3>Name: <span id="name"></span> </h3>
@@ -79,12 +85,14 @@
   <h3>Phone number: <span id="phone"></span> </h3>
   <h3>Website: <span id="website"></span> </h3>
   <h3>Adress: <span id="adress"></span> </h3>
-  <h3>Delete: <span id="delete"></span></h3>
+  <h3>Delete: <button type="button" value="Delete" onclick="deleteRow(this)">Delete</button><span id="delete"></span></h3>
 
-  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
+  
 
   <!-- Kommentar -->
    
+
+
 
   <script src="script.js"></script>
 </body>
