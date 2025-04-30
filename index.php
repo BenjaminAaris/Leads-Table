@@ -53,7 +53,7 @@
     
     while ($row = mysqli_fetch_assoc($result)){
       echo "
-      <tr id='row' onclick='showLead(". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
+      <tr id='". $row['id'] ."' onclick='showLead(". $row['id'] . ",`". $row['name'] ."`,`". $row['mail'] ."`,`". $row['city'] ."`,`". $row['postal_code'] ."`,`". $row['vat_number'] ."`,`". $row['phone'] ."`,`". $row['website'] ."`,`". $row['adress'] ."`)'>
         <td>" . $row['id'] . "</td>
         <td>" . $row['name'] ."</td>
         <td>" . $row['mail'] ."</td>
@@ -63,13 +63,13 @@
         <td>" . $row['phone'] ."</td>
         <td>" . $row['website'] ."</td>
         <td>" . $row['adress'] ."</td>
-        <td><button type='button' value='Detlete' onlick='deleteRow(l)'>Delete</button>" . $row['delete'] ."</td>
+        <td><button onclick='deleteLead(". $row['id'] .")''>Delete row</button>" . $row['delete'] ."</td>
       </tr> 
       ";
     }
     
     ?>
-
+  <button onclick=""></button>
 
   </table>
   <h3>ID: <span id="id"></span></h3>
@@ -81,15 +81,7 @@
   <h3>Phone number: <span id="phone"></span> </h3>
   <h3>Website: <span id="website"></span> </h3>
   <h3>Adress: <span id="adress"></span> </h3>
-  <h3>Delete: <button type="button" value="Delete" onclick="deleteRow(this)">Delete</button><span id="delete"></span></h3>
-
-  <script>
-function deleteRow(r) {
-  var l = r.parentNode.parentNode.rowIndex;
-  document.getElementById("table").deleteRow(r);
-}
-</script>
-
+  
   <!-- Kommentar -->
    
 
