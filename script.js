@@ -8,7 +8,7 @@ function showLead(id, name, mail, city, postal_code, vat_number, phone, website,
     document.getElementById("phone").innerHTML = phone;
     document.getElementById("website").innerHTML = website;
     document.getElementById("adress").innerHTML = adress;
-
+    document.getElementById("delete").innerHTML = '';
 }
 
 function search(event) {
@@ -64,4 +64,4 @@ function search(event) {
         }
     }
   }
-
+  

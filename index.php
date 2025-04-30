@@ -63,17 +63,13 @@
         <td>" . $row['phone'] ."</td>
         <td>" . $row['website'] ."</td>
         <td>" . $row['adress'] ."</td>
-        <td><button type='button' value='Detlete' onlick='deleteRow(this)'>Delete</button>" . $row['delete'] ."</td>
+        <td><button type='button' value='Detlete' onlick='deleteRow(l)'>Delete</button>" . $row['delete'] ."</td>
       </tr> 
       ";
     }
+    
     ?>
-    <script>
-function deleteRow(r) {
-  var l = r.parentNode.parentNode.rowIndex;
-  document.getElementById("table").deleteRow(r);
-}
-</script>
+
 
   </table>
   <h3>ID: <span id="id"></span></h3>
@@ -87,7 +83,12 @@ function deleteRow(r) {
   <h3>Adress: <span id="adress"></span> </h3>
   <h3>Delete: <button type="button" value="Delete" onclick="deleteRow(this)">Delete</button><span id="delete"></span></h3>
 
-  
+  <script>
+function deleteRow(r) {
+  var l = r.parentNode.parentNode.rowIndex;
+  document.getElementById("table").deleteRow(r);
+}
+</script>
 
   <!-- Kommentar -->
    
