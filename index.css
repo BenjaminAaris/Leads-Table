@@ -3,13 +3,11 @@ th, tr, td {
     border-collapse: collapse;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
     margin-right: auto;
     margin-left: auto;
   }
   table{
     border: 1px solid black;
-    border-collapse: collapse;
     width: 80px;
     height: 80px;
   }
@@ -24,7 +22,6 @@ th, tr, td {
   tr {
     width: 150px;
     height: 50px;
-    font-size: larger;
   }
   td {
     width: 150px;
