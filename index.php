@@ -35,7 +35,7 @@
 
   <input type="text" id="mySearch" onkeyup="search(event)" placeholder="Search.." title="Type in a category">
 
-  <form method="POST">
+
   <table border="1" id="table" style="width: 100%;">
     <col width="20px" />
     <col width="30px" />
@@ -67,7 +67,7 @@
         <td>" . $row['phone'] ."</td>
         <td>" . $row['website'] ."</td>
         <td>" . $row['adress'] ."</td>
-        <td><button onclick='deleteLead(event, ". $row['id'] .")''>Delete row</button>" . $row['delete'] ."</td>
+        <td><button onclick='deleteLead(event, ". $row['id'] .")''> Delete row </button>" . $row['delete'] ."</td>
       </tr> 
       ";
     }
@@ -103,17 +103,22 @@
     <h3>Adress: <span id="adress"></span> </h3>
   </div>
 </div>
+  
+<form method="POST">
 <?php
 
-  $sql="DELETE FROM leads WHERE id= ";
+
 
   if (mysqli_query($conn, $sql)) {
-    echo "you have now succesfully deleted this data";
-  } else {
-    echo "Error deleting record: " . mysqli_error($conn);
-  }
+     echo "<td><button onclick='deleteLead(event, " . $row['id'] . ")></td>";
+     echo "you have now succesfully deleted this data";
+   } else {
+    echo "Error deleting record: " . mysqli_error($conn); 
+  } 
+
 
 ?>
+</form>
 
 </body>
 </html>
