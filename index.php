@@ -19,20 +19,24 @@
     echo "0 results";
   }
 
-  mysqli_close($conn);
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Leads_Table</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
   <input type="text" id="mySearch" onkeyup="search(event)" placeholder="Search.." title="Type in a category">
-  <table id="table" style="width: 100%;">
+
+  <form method="POST">
+  <table border="1" id="table" style="width: 100%;">
     <col width="20px" />
     <col width="30px" />
     <col width="40px" />
@@ -99,7 +103,17 @@
     <h3>Adress: <span id="adress"></span> </h3>
   </div>
 </div>
+<?php
+  $sql="DELETE FROM leads WHERE id=8";
 
+  if (mysqli_query($conn, $sql)) {
+    echo "Record deleted successfully";
+  } else {
+    echo "Error deleting record: " . mysqli_error($conn);
+  }
+
+
+?>
 
 </body>
 </html>
