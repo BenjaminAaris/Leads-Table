@@ -107,7 +107,7 @@
 <form method="POST">
 <?php
 
-
+$sql = "DELETE FROM leads WHERE id=". $row['id'] . "";
 
   if (mysqli_query($conn, $sql)) {
      echo "<td><button onclick='deleteLead(event, " . $row['id'] . ")></td>";
