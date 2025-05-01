@@ -24,6 +24,9 @@ th, tr, td {
     width: 150px;
     height: 50px;
   }
+  tr:nth-child(even){
+    background-color: rgb(172, 165, 165);
+  }
   td {
     width: 150px;
     height: 50px;
@@ -32,9 +35,17 @@ th, tr, td {
   }
   
   tr:hover {background-color: aqua;}
+  td:hover {background-color: rgb(214, 126, 210);}
  
-  th:nth-child(even){background-color: rgb(14, 238, 6);}
-  th:nth-child(odd){background-color: rgb(14, 238, 6);}
+  th:nth-child(even){background-color: rgb(44, 212, 38);}
+  th:nth-child(odd){background-color: rgb(44, 212, 38);}
+  button{
+    background-color: rgb(207, 61, 61);
+    font-size: larger;
+    vertical-align: middle;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
   h3{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -43,10 +54,6 @@ th, tr, td {
     font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   } 
-  button {
-    font-size: 25px;
-
-  }
 *{
 box-sizing: border-box;
 }

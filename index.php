@@ -80,19 +80,19 @@
 
 
   <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:white;">
     <h2>Navn og info:</h2>
     <h3 >ID: <span id="id"></span></h3>
   <h3>Name: <span id="name"></span> </h3>
   <h3>Website: <span id="website"></span> </h3>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:white;">
     <h2>By og CVR nummer:</h2>
     <h3>City: <span id="city"></span> </h3>
   <h3>Postal code: <span id="postal_code"></span> </h3>
   <h3>Vat number: <span id="vat_number"></span> </h3>
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="column" style="background-color:white;">
     <h2>Kontakt:</h2>
     <h3>Mail: <span id="mail"></span> </h3>
     <h3>Phone number: <span id="phone"></span> </h3>
