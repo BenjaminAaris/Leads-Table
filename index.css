@@ -40,20 +40,39 @@ th, tr, td {
   th:nth-child(even){background-color: rgb(44, 212, 38);}
   th:nth-child(odd){background-color: rgb(44, 212, 38);}
   button{
-    background-color: rgb(207, 61, 61);
-    font-size: larger;
+    font-size: 25px;
     vertical-align: middle;
     border-collapse: collapse;
     border: 1px solid black;
   }
+  button:hover{background-color: rgb(207, 38, 38);}
   h3{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
   }
+ 
   input {
     font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   } 
+
+@keyframes example {
+  0%   {background-color:rgb(255, 255, 255); left:0px; top:0px;}
+  25%  {background-color:rgb(255, 255, 255); left:1000px; top:0px;}
+  50%  {background-color:rgb(255, 255, 255); left:0%; top:0px;}
+  75%  {background-color:rgb(255, 255, 255); left:1000px; top:0px;}
+  100% {background-color:rgb(255, 255, 255); left:0px; top:0px;}
+}
+input {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
 *{
 box-sizing: border-box;
 }
