@@ -13,12 +13,6 @@
   $sql = 'select * from leads';
   $result = mysqli_query($conn, $sql);
 
-  if (mysqli_num_rows($result)>0) {
-    
-  } else {
-    echo "0 results";
-  }
-
 
 ?>
 
@@ -67,7 +61,7 @@
         <td>" . $row['phone'] ."</td>
         <td>" . $row['website'] ."</td>
         <td>" . $row['adress'] ."</td>
-        <td><button onclick='deleteLead(event, ". $row['id'] .")'> Delete row </button>" . $row['delete'] ."</td>
+        <td><button onclick='deleteLead(event, ". $row['id'] .")'> Delete row </button></td>
       </tr> 
       ";
     }
@@ -103,23 +97,6 @@
     <h3>Adress: <span id="adress"></span> </h3>
   </div>
 </div>
-  
-<form method="POST">
-  <?php
-
-  $sql = "DELETE FROM leads WHERE id=" . $row['id'] . "";
-
-    if (mysqli_query($conn, $sql)) {
-      echo "<td><button onclick='deleteLead(event, " . $row['id'] . ")></button></td>";
-      echo "you have now succesfully deleted this data";
-    } else {
-      echo "Error deleting record: " . mysqli_error($conn); 
-    } 
-
-
-  ?>
-  
-</form>
 
 </body>
 </html>
