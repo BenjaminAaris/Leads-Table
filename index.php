@@ -67,7 +67,7 @@
         <td>" . $row['phone'] ."</td>
         <td>" . $row['website'] ."</td>
         <td>" . $row['adress'] ."</td>
-        <td><button onclick='deleteLead(event, ". $row['id'] .")''> Delete row </button>" . $row['delete'] ."</td>
+        <td><button onclick='deleteLead(event, ". $row['id'] .")'> Delete row </button>" . $row['delete'] ."</td>
       </tr> 
       ";
     }
@@ -105,19 +105,20 @@
 </div>
   
 <form method="POST">
-<?php
+  <?php
 
-$sql = "DELETE FROM leads WHERE id=". $row['id'] . "";
+  $sql = "DELETE FROM leads WHERE id=" . $row['id'] . "";
 
-  if (mysqli_query($conn, $sql)) {
-     echo "<td><button onclick='deleteLead(event, " . $row['id'] . ")></td>";
-     echo "you have now succesfully deleted this data";
-   } else {
-    echo "Error deleting record: " . mysqli_error($conn); 
-  } 
+    if (mysqli_query($conn, $sql)) {
+      echo "<td><button onclick='deleteLead(event, " . $row['id'] . ")></button></td>";
+      echo "you have now succesfully deleted this data";
+    } else {
+      echo "Error deleting record: " . mysqli_error($conn); 
+    } 
 
 
-?>
+  ?>
+  
 </form>
 
 </body>
