@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\sql_injection_subst;
+
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -13,6 +16,19 @@
   $sql = 'select * from leads';
   $result = mysqli_query($conn, $sql);
 
+ 
+
+
+  // Super sej kode ligger her!!!!
+
+
+  if( isset( $_POST['delete'] ) ) {
+    $sql =  "DELETE FROM leads WHERE id=" . $row['id'] . " ";
+    $deleteResult = mysqli_query($conn, $sql);
+  
+  }
+
+  
 
 ?>
 

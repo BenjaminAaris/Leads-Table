@@ -66,5 +66,14 @@ function search(event) {
   function deleteLead(event, id) {
     event.stopPropagation();
     document.getElementById(id).remove();
+    fetch("http://localhost/Leads-Table/index.php", {
+        method: "POST",
+        body: JSON.stringify({
+         lead_id: id
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      });
   }
 
